@@ -1,4 +1,4 @@
-// Write your JavaScript code here!
+
 window.addEventListener("load", function() {
    let form = document.querySelector("form");
    form.addEventListener("submit", function(event) {
@@ -54,33 +54,32 @@ window.addEventListener("load", function(){
    fetch("https://handlers.education.launchcode.org/static/planets.json").then(function(response){
       response.json().then(function(json){
          let targetOfMission = document.getElementById("missionTarget");
-         targetOfMission.addEventListener("click",function(){
-            targetOfMission.innerHTML =`
+         targetOfMission.innerHTML =`
             <h2>Mission Destination</h2>
             <ol>
-            <li>Name: ${json[1].name}</li>
-            <li>Diameter: ${json[1].diameter}</li>
-            <li>Star: ${json[1].star}</li>
-            <li>Distance from Earth: ${json[1].distance}</li>
-            <li>Number of Moons: ${json[1].moons}</li>
+            <li>Name: ${json[2].name}</li>
+            <li>Diameter: ${json[2].diameter}</li>
+            <li>Star: ${json[2].star}</li>
+            <li>Distance from Earth: ${json[2].distance}</li>
+            <li>Number of Moons: ${json[2].moons}</li>
             </ol>
-            <img src=${json[1].image}>`
+            <img src=${json[2].image}>`
          });
       });
    });    
-});
-
+ 
    
    
    
-
-
-
-
-
-
-
-
+   
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 
